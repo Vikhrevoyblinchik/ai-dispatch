@@ -107,7 +107,7 @@ def summarize_with_claude(articles: list[dict]) -> str:
 </div>"""
 
     msg = client.messages.create(
-        model="claude-opus-4-7",
+        model="claude-sonnet-4-6",
         max_tokens=3000,
         messages=[{"role": "user", "content": prompt}],
     )
