@@ -71,7 +71,7 @@ if check("config.yml 存在", config_path.exists()):
 # ── 3. LLM API ───────────────────────────────────
 section(f"LLM API ({provider})")
 api_key = os.getenv(llm_key_name)
-model = cfg["digest"]["model"] if cfg else ("gemini-2.0-flash" if provider == "gemini" else "claude-sonnet-4-6")
+model = "gemini-2.0-flash"
 if api_key:
     try:
         if provider == "gemini":
