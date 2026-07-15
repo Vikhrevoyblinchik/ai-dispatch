@@ -15,6 +15,18 @@ OK = "✅"
 FAIL = "❌"
 errors = []
 
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Проверка настроек
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: python check_setup.py
 
 def check(label: str, ok: bool, detail: str = "") -> bool:
     status = OK if ok else FAIL
