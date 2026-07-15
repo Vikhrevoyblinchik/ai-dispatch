@@ -141,6 +141,6 @@ digest:
   news_per_source: 50     # 每个新闻源最多抓取条数
   blog_per_source: 20     # 每个博客最多抓取条数
   
-  model: gemini-2.0-flash       # gemini: gemini-2.0-flash（免费稳定）/ gemini-2.5-pro（更强）
+  gemini_model: gemini-2.0-flash       # gemini: gemini-2.0-flash（免费稳定）/ gemini-2.5-pro（更强）
   max_tokens: 6000
   output_language: English  # 摘要输出语言，可改为 中文
