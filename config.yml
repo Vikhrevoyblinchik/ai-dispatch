@@ -4,18 +4,6 @@
 #  完整说明：README.md
 # ╚══════════════════════════════════════════════════════════════╝
 
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Проверка настроек
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
-        run: python check_setup.py
         
 # ──────────────────────────────────────────────
 #  STEP 1 · 告诉 Claude 你关注什么领域
